@@ -1,0 +1,38 @@
+#cat{
+	margin-left: 400px;
+}
+/* comment */
+
+#red{
+	border: solid;
+  border-color: red;
+  border-width: 3px;
+  margin-left: 500px;
+
+}
+#bla{
+	border: solid;
+  border-color: black;
+  border-width: 3px;
+  margin-left: 80px;
+
+
+}
+
+td{
+	border: solid;
+  border-color: black;
+  border-width: 3px;
+
+
+}
+#para{
+	border: solid;
+  border-color: red;
+  border-width: 3px;
+  width: 350px;
+  padding-left: 5px;
+  margin-left: 500px;
+
+  
+}

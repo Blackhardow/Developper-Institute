@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+		#main {
+			background-color: darkblue;
+			height: 500px;
+			width: 500px;
+			display: grid;
+			grid-gap: 5px;
+			text-align: center;
+			grid-template-areas: 
+			"a a a a a a"
+			"b b c c c c"
+			"b b c c c c"
+			"b b c c c c"
+			"d d c c c c"
+			"d d e e e e"
+			"d d e e e e"
+			"f f f f f g"
+			"f f f f f g"
+			"h h h h h h";
+
+		}
+		#header{
+			background-color: darkred;
+			grid-area: a;
+		}
+		#hero{
+			background-color: darkorange;
+			grid-area: b;
+		}
+		#maincontent{
+			background-color: darkgrey;
+			grid-area: c;
+		}
+		#sidebar{
+			background-color: yellow;
+			grid-area: d;
+
+		}
+		#extracontent{
+			background-color: darkviolet;
+			grid-area: e;
+		}
+		#relatedimage{
+			background-color: magenta;
+			grid-area: f;
+		}
+		#relatedpost{
+			background-color: darkgreen;
+			grid-area: g;
+		}
+		#footer{
+			background-color: skyblue;
+			grid-area: h;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div id="main">
+		<div id="header">Header</div>
+		<div id="hero">Hero</div>
+		<div id="maincontent">main content</div>
+		<div id="sidebar">side bar</div>
+		<div id="extracontent">extraccontent</div>
+		<div id="relatedimage">relatedcimage</div>
+		<div id="relatedpost">relatedcpost</div>
+		<div id="footer">footer</div>
+	</div>
+	<br>
+
+</body>
+</html>

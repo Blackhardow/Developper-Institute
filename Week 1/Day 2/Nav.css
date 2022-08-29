@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+	background-image: url(https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+nav {
+	background-color: black;
+	height: 90px;
+}
+
+#navbar{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	margin-left: 15px;
+}
+
+ul{
+	float: right;
+}
+
+ul li{
+	display: inline-block;
+
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 15px;
+}
+
