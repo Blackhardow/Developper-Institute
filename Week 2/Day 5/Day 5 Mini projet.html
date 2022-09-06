@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Game Javascript</title>
+</head>
+<style type="text/css">
+    *{
+    font-family: 'PT Sans', sans-serif;
+     }
+
+body{
+    padding: 50px
+    }
+Footer
+  © 2022 GitHub, Inc.
+
+</style>
+
+<body>
+    <h1>MiniProject-PlayTheGame</h1>
+    <button onclick="playTheGame()">Click to play the game</button>
+<script type="text/javascript">
+   function playTheGame(){ 
+
+    let question1= confirm('Voulez vous jouer à un jeu?');
+    if (question1 == false){
+        alert('Pas de probleme au revoir')
+    }else {
+        let userNumber = prompt('Entrer un valeur entre 0 et 10');
+        if (isNaN(userNumber)) {
+            alert ('desolé cest pas un nombre bye')
+        }else if (userNumber < 0 || userNumber > 10){
+            alert('desolé cest pas la bonne plage de nombre bye')
+        }else{
+            let computerNumber= Math.round(Math.random()*10);
+            
+            compareNumbers(userNumber,computerNumber)
+        }
+        
+    }
+
+
+
+
+    
+   }
+    // if (confirm("Press a button!") == true) {
+    //     let nums ;
+    //     let computerNumber;
+    //    do { 
+    //      nums = parseInt(prompt('Enter a number between 0 and 10'))
+    //       }while 
+    //      ( nums < 0 || nums > 10 ) 
+    //   for (let i = 0; i < 10; i++){
+    //     console.log(computerNumber[i].
+    //         }
+    //     alert("No problem good bye ")
+    // }
+  
+  function compareNumbers(userNumber,computerNumber){
+     for (let i = 0; i <= 2; i++) {
+        
+     
+     if (userNumber == computerNumber) {
+         alert('You are the WINNER');
+         return;
+     }
+     else if(i == 2){
+        alert(`Too many tries!! The right number was: ${computerNumber}`)
+     }else if (userNumber > computerNumber) {
+         userNumber = prompt('Your number is bigger then the computer’s, guess again')
+         
+     }else if (userNumber < computerNumber){
+         userNumber = prompt('Your number is smaller then the computer’s, guess again')
+
+     }
+    } 
+   }
+</script>
+</body>
+
+</html>
