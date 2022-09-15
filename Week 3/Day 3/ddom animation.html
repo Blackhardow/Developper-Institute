@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dom annimation</title>
+	  <style>
+        p {
+          background: yellow;
+          color: red;
+        }
+        </style>
+</head>
+<body>
+ <div id="container"></div>
+        <button id="clear" onclick="yaya()">Clear Interval</button>
+	<!-- <p id="demo"></p>
+
+	<button onclick="myStopFunction()">Stop time</button>
+ -->
+</body>
+<script type="text/javascript">
+// function sayHi() {
+//   alert('Les ventes se terminent dans 10 min' );
+// }
+
+// setTimeout(sayHi, 5000, "Hello", "John"); //  calls sayHi() after one second --> Hello, John
+
+
+// let timer = setInterval(myTimer, 1000);
+
+// function myTimer() {
+//   let date = new Date();
+//   let time = date.toLocaleTimeString();
+//   // date.toLocaleTimeString() returns a string with a language sensitive representation of the time portion of this date
+//   document.getElementById("demo").innerHTML = time;
+// }
+
+// function myStopFunction() {
+//   clearInterval(timer);
+// }	
+ function sayHi() {
+  alert('Les ventes se terminent dans 10 min' );
+ }
+ setTimeout(sayHi, 5000, "", "");
+ 
+function firmn(){
+	let oldiv = document.getElementById('container');
+ 	let para = document.getElementById('clear');
+ 	let bobo = document.getElementsByTagName('body');
+ 	let pe = document.createElement('p')
+ 	let text = document.createTextNode('Hello world')
+
+ 	oldiv.appendChild(pe)
+ 	pe.appendChild(text)
+}
+
+let been = setInterval(firmn, 2000)
+
+function yaya(){
+	clearInterval(been)
+}
+
+  // setTimeout(function interval() {
+ //  	pe.appendChild(text)
+      
+ // }, 2000);
+
+ // function Timeout {
+ //   	oldiv.appendChild(pe)
+ //  	console.log(oldiv)
+      
+ // };
+
+//  setInterval(inter, 3000) 
+
+//  function inter() {
+// 	pe.appendChild(text)
+// };
+
+      
+
+</script>
+</html>

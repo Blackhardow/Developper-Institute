@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+  <table id="sampleTable" border="1"> 
+		<tr>
+    		<td>Row1 cell1</td> 
+    		<td>Row1 cell2</td>
+		</tr> 
+		<tr>
+    		<td>Row2 cell1</td> 
+    		<td>Row2 cell2</td>
+		</tr> 
+  </table>
+
+<button onclick="insertRow()" >click</button>  
+<button id="new" >click</button> 
+<input type="text" onchange="alert(this.value)">
+<input type="button" value="Button">
+<input type="text" id="input"> ONINPUT <span id="result"></span>
+
+<br><br><br><br>
+  <form id="form1" onsubmit="getvalue()"> 
+        <label>First name: </label><input type="text" name="fname" value="David"><br> 
+        <label>Last name: </label><input type="text" name="lname" value="BenGurion"><br> 
+        <input type="submit" value="Submit"> 
+    </form> 
+
+    <br><br><br><br>
+    <select id="A">
+  <option value="apple">Apple</option>
+  <option value="pear">Pear</option>
+  <option value="banana">Banana</option>
+</select>
+<br><br><br><br>
+<select id="A">
+  <option value="apple">Apple</option>
+  <option value="pear">Pear</option>
+  <option value="banana">Banana</option>
+</select>
+<br><br><br><br><br>
+<select id="select1"> 
+    <option value="apple">Middle School</option>
+    <option value="pear">University</option>
+    <option value="banana">College</option>
+</select>
+<br><br><br>
+<article>
+    <h1> Some Facts </h1>
+    <h2> The Chocolate </h2>
+    <h3> History of the chocolate </h3>
+    <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+    Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+    <p> After the European discovery of the Americas, chocolate became 
+    very popular in the wider world, and its demand exploded. </p>
+    <p> Chocolate has since become a popular food product that millions enjoy every day, 
+    thanks to its unique, rich, and sweet taste.</p> 
+    <p> But what effect does eating chocolate have on our health?</p> 
+</article>
+</body>
+<script type="text/javascript">
+	function insertRow(){
+
+		let t = document.getElementById('sampleTable');
+		let newtr = document.createElement('tr');
+		let newtd = document.createElement('td');
+		let text = document.createTextNode('cell4');
+	
+		newtd.appendChild(text)
+		newtr.appendChild(newtd)
+		t.appendChild(newtr)
+
+		console.log(t)
+	}
+
+
+	let btn = document.getElementById('new');
+
+	console.log(btn)
+	btn.addEventListener('click', changeStyle)
+
+	function changeStyle() {
+		btn.style.color = 'red'
+	};
+
+	 let newInput =  document.getElementById('input')
+  		newInput.oninput = function() {
+    	result.innerHTML = input.value;
+  };
+
+  let yen = document.getElementById('form1')
+  console.log(yen)
+  let One = yen.elements[0].value; 
+  console.log(One)
+
+  let Two = yen.elements[1].value; 
+  console.log(Two)
+
+
+   //get the select form
+  let dropdown = document.getElementById('A')
+
+  // all three lines do the same thing
+  dropdown.options[2].selected = true; //Banana selected
+  dropdown.value = 'banana'; //Banana selected
+  dropdown.selectedIndex = 2; //Banana selected
+
+  // To check which option is selected
+    console.log(dropdown.selectedIndex) // "2"
+    console.log(dropdown.value) // "Banana"
+
+    let sel1 = document.getElementById('select1')
+    console.log(sel1.options[1].value)
+
+    let newOption = document.createElement('option')
+    sel1.appendChild(newOption)
+    sel1.options[3].value = 'work'
+    console.log(sel1)
+
+
+
+    let sel4 = document.querySelector('h1');
+     console.log(sel4.innerHTML);
+
+     let ha = document.querySelector('h2');
+
+  console.log(ha)
+  ha.addEventListener('click', changeStyl)
+
+  function changeStyl() {
+    ha.style.background = 'red'
+  };
+
+   let ha1 = document.querySelector('h3');
+
+  console.log(ha1)
+  ha1.addEventListener('click', changeStylS)
+
+  function changeStylS() {
+    ha1.style.display = 'none' ;
+  };
+
+  let btion = document.createElement('button');
+  let para = document.getElementsByTagName('p')
+  let arti = document.getElementsByTagName('article')[0];
+  let opacit = document.getElementsByTagName('p')[1];
+
+    console.log(opacit)
+   arti.appendChild(opacit)
+  opacit.addEventListener('onmouseover', funcOp)
+  function funcOp(){
+    opacit.style.color = 'red'
+    opacit.style.transition = 'opacity 2'
+    opacit.style.opacity = '0.5'
+  }
+
+
+
+btion.innerHTML = 'clicks';
+arti.appendChild(btion);
+
+  document.querySelector('btion')
+  btion.addEventListener('click', changeStylSe)
+
+  function changeStylSe() {
+    for(i = 0; i<=3; i++){
+    para[i].style.fontWeight = 'bold' ;
+    }
+  };
+
+</script>
+ <!-- <form>
+        <input type="button" name="test" value="Click me" onclick="inform()">
+    </form>
+
+    <script>
+        function inform(){
+            alert("You clicked me")
+        }
+    </script> -->
+</html>

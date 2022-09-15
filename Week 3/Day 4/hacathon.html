@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+<link rel="stylesheet" href="/path/to/leaflet.css" />
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+   <style type="text/css">
+   	#map { height: 360px;
+   				width: 380px;
+   			 }
+   </style>
+   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+<script src="/path/to/leaflet.js"></script>
+	<title></title>
+</head>
+<body>
+	<div align="center">
+		<h2>Obtenir les parametres d'une position </h2>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+<br>
+<br>
+<div id="map"></div>
+	</div>
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    let pos = navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+};
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+};
+
+function card() {
+ let newdiv = document.getElementById('map')
+let map = L.map('map').setView([3.866624, 11.5146752], 13).addTo(map);
+// let marker = L.marker([3.866624, 11.5146752],
+//	newdiv.appendChild(map)
+
+  // {alt: 'D-I'}).addTo(map) // map of di
+  // .bindPopup('DI is located at nsymeyong!');
+// }
+function vehicleAttrib(pos) {
+  
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=maclefxxxxxxxxxxamoi&callback=initMap"
+    async defer></script>
+</body>
+</html>

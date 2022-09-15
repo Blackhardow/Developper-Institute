@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+		}
+		.cl{
+			display: block;
+			height: 600px;
+			width: 100%;
+			background-color: darkgrey;
+
+		}
+		.sidebar{
+			display: block;
+			border: solid;
+			margin: 0px;
+			height: 100%;
+			background-color: azure;
+
+		}
+		.bt{
+			margin: 5px;
+			align: center;
+			height: 50px;
+			width: 100px;
+			border-radius: 10%;
+			margin-left: 100px;
+			font-weight: bold;
+			hover-colr: Darkgrey;
+		}
+		#colo {
+	display: grid;
+	width: 50%;
+	grid-gap:3px;
+	margin: 3px;
+
+
+
+	/* border: 2px red solid; */
+	
+}
+		
+	
+
+	</style>
+</head>
+<body>
+	<div class="cl">
+		<div class="col-3 sidebar">
+			<button class="bt">CLEAR</button>
+			 <div id='colo'></div>
+		</div>
+		<div class="col-9 offset-3 main"></div>
+	</div>
+
+</body>
+<script type="text/javascript">
+let loc = document.getElementById('colo');
+
+console.log(loc);
+// document.getElementById('colo').style.gridTemplateColumns = '3, 1fr';
+// document.getElementById('colo').loc.style.gridTemplateRows = '7, 1fr';
+
+
+let i;
+for ( i =0; i <= 20; i++) {
+	let newdiv = document.createElement('div');
+	loc.appendChild(newdiv)[i];
+	newdiv.style.heigth = '150px'
+	newdiv.style.width = '150px'
+	// newdiv.style.display = 'inline-block'
+	// newdiv.style.padding = '5px'
+    newdiv.style.background = 'darkorange'
+	newdiv.style.magin = '2px'
+	newdiv.innerHTML = 'darkorange'
+}
+
+</script>
+</html>
